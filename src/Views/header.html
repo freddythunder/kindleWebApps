@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kindle Scribe Web Apps</title>
+    <meta charset="UTF-8">
+    <style>
+        <?= $this->stylesheet; ?>
+    </style>
+</head>
+<body>
+<div class="navigation border">
+    <?php
+    foreach ($this->navigation as $navItem) {
+        $active = strtolower($navItem['link']) === strtolower($this->page)
+            || (!$navItem['link'] && $this->page === 'Home') ? 'active' : '';
+    ?>
+        <a href="<?= $this->localPath . $navItem['link']; ?>" class="<?= $active; ?>"><?= $navItem['name']; ?></a>
+    <?php } ?>
+
+</div>
+<div class="container border">
+
