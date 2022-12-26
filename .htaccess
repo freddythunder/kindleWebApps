@@ -1,0 +1,17 @@
+Options +FollowSymLinks
+
+AddHandler application/x-httpd-php .html
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*[^/])$ $1/
+RewriteRule ^([^/]+)/$ index.html?page=$1 [PT]
+RewriteRule ^([^/]+)/([^/]+)/$ index.html?page=$1&$2 [PT]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/$ index.html?page=$1&$2=$3 [PT]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ index.html?page=$1&$2=$3&$4=$5 [PT]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ index.html?page=$1&$2=$3&$4=$5 [PT]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ index.html?page=$1&$2=$3&$4=$5&$6=$7 [PT]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ index.html?page=$1&$2=$3&$4=$5&$6=$7 [PT]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ index.html?page=$1&$2=$3&$4=$5&$6=$7&$8=$9 [PT]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ index.html?page=$1&$2=$3&$4=$5&$6=$7&$8=$9 [PT]
+
